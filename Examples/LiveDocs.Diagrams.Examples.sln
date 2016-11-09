@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveDocs.Diagrams.Examples.AcceptanceTests", "LiveDocs.Diagrams.Examples.AcceptanceTests\LiveDocs.Diagrams.Examples.AcceptanceTests.csproj", "{CD221982-91D1-44BC-82CB-FE8150386422}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveDocs.Diagrams.Examples.Console", "LiveDocs.Diagrams.Examples.Console\LiveDocs.Diagrams.Examples.Console.csproj", "{627CE748-403D-4EC8-B0A3-C09EE6F147C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD221982-91D1-44BC-82CB-FE8150386422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD221982-91D1-44BC-82CB-FE8150386422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD221982-91D1-44BC-82CB-FE8150386422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD221982-91D1-44BC-82CB-FE8150386422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{627CE748-403D-4EC8-B0A3-C09EE6F147C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{627CE748-403D-4EC8-B0A3-C09EE6F147C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{627CE748-403D-4EC8-B0A3-C09EE6F147C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{627CE748-403D-4EC8-B0A3-C09EE6F147C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

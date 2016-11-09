@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62B82723-68AF-4CF0-9821-EC39AED625A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LiveDocs.Diagrams.Graph.Executable</RootNamespace>
+    <AssemblyName>LiveDocs.Diagrams.Graph.Executable</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuilderImplementations\CreatedInstances.cs" />
+    <Compile Include="BuilderImplementations\FlowBuilderStart.cs" />
+    <Compile Include="BuilderImplementations\FlowBuilderFrom.cs" />
+    <Compile Include="BuilderImplementations\FlowBuilderTo.cs" />
+    <Compile Include="BuilderImplementations\StartViaBuilder.cs" />
+    <Compile Include="Builders\IFlowBuilderStart.cs" />
+    <Compile Include="Builders\IFlowBuilderFrom.cs" />
+    <Compile Include="Builders\IFlowBuilderTo.cs" />
+    <Compile Include="Builders\IStartViaBuilder.cs" />
+    <Compile Include="Builders\FlowBuilder.cs" />
+    <Compile Include="Commands\CompositeCommand.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Enums\PathResolverState.cs" />
+    <Compile Include="Events\ActionExecutionEvent.cs" />
+    <Compile Include="Events\CommandExecutionEvent.cs" />
+    <Compile Include="Events\EventLevelEvent.cs" />
+    <Compile Include="Events\IEvent.cs" />
+    <Compile Include="Events\PathExecutionEvent.cs" />
+    <Compile Include="Events\PathResolutionCompleteEvent.cs" />
+    <Compile Include="Events\QueryExecutionEvent.cs" />
+    <Compile Include="Helpers\InstanceHelper.cs" />
+    <Compile Include="Logging\EventIndentationLogger.cs" />
+    <Compile Include="Logging\EventLevelLoggerFactory.cs" />
+    <Compile Include="Logging\IEventLogger.cs" />
+    <Compile Include="Logging\IEventLoggerFactory.cs" />
+    <Compile Include="Logging\LoggingEventPublisher.cs" />
+    <Compile Include="Logging\LoggingEventPublisherFactory.cs" />
+    <Compile Include="Logging\LogLevel.cs" />
+    <Compile Include="Models\Action.cs" />
+    <Compile Include="Models\Decision.cs" />
+    <Compile Include="Models\DecisionSelection.cs" />
+    <Compile Include="Models\DescriptiveAction.cs" />
+    <Compile Include="Models\ExecutableAction.cs" />
+    <Compile Include="Models\IAction.cs" />
+    <Compile Include="Models\IDecision.cs" />
+    <Compile Include="Models\IDecision{TStateId}.cs" />
+    <Compile Include="Models\ISelection.cs" />
+    <Compile Include="Models\IExecutableAction.cs" />
+    <Compile Include="Models\ISequentialDecision.cs" />
+    <Compile Include="Models\IState.cs" />
+    <Compile Include="Models\IState{TStateId}.cs" />
+    <Compile Include="Models\ITransition.cs" />
+    <Compile Include="Models\PathResult.cs" />
+    <Compile Include="Models\SequentialFlow.cs" />
+    <Compile Include="Models\StartState.cs" />
+    <Compile Include="Models\State.cs" />
+    <Compile Include="Models\StateMissingException.cs" />
+    <Compile Include="Models\Test.cs" />
+    <Compile Include="Models\Transition.cs" />
+    <Compile Include="Models\Flow.cs" />
+    <Compile Include="Processors\MermaidFlowChartDirection.cs" />
+    <Compile Include="Processors\MermaidProcessor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Publishing\IEventPublisher.cs" />
+    <Compile Include="Publishing\IEventPublisherFactory.cs" />
+    <Compile Include="Publishing\NoopEventPublisher.cs" />
+    <Compile Include="Publishing\NoopEventPublisherFactory.cs" />
+    <Compile Include="Queries\CompositeAllQuery.cs" />
+    <Compile Include="Queries\CompositeAnyQuery.cs" />
+    <Compile Include="Queries\IQuery.cs" />
+    <Compile Include="Services\ICommandResolver.cs" />
+    <Compile Include="Services\IPathTestStrategy.cs" />
+    <Compile Include="Services\IQueryResolver.cs" />
+    <Compile Include="Services\SetService.cs" />
+    <Compile Include="Strategies\DefaultPathResolverStrategy.cs" />
+    <Compile Include="Strategies\EndToEndPathStrategy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LiveDocs.Diagrams.Graph\LiveDocs.Diagrams.Graph.csproj">
+      <Project>{6EAF9088-A986-4FE2-A3F6-EE134157A5A7}</Project>
+      <Name>LiveDocs.Diagrams.Graph</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
